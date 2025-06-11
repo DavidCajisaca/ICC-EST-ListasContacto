@@ -21,7 +21,7 @@ public Contact(T name, U phone) {
 }
 @Override
 public String toString() {
-    return "Contanct [nombre=" + name + ", telefono=" + phone + "]";
+    return "Contacto [nombre=" + name + ", telefono=" + phone + "]";
 }
  
 

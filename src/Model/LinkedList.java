@@ -15,7 +15,7 @@ public class LinkedList<T> {
             System.out.print(current.getValue() + (current.getNext() != null ? " -> " : ""));
             current = current.getNext();
         }
-        System.out.println(" -> End"); 
+        System.out.println(" "); 
     }
 
     public Node<T> getHead() {

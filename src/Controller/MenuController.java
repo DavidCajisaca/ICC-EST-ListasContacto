@@ -16,7 +16,7 @@ public class MenuController {
         boolean exit = false;
         while (!exit) {
             consoleView.displayMenu();
-            String option = consoleView.getinput("Enter option: ");
+            String option = consoleView.getinput("Ingrese la opcion: ");
             switch (option) {
                 case "1":
                     addContact();
@@ -32,30 +32,30 @@ public class MenuController {
                     break;
                 case "5":
                     exit = true;
-                    consoleView.showMessage("Exiting...");
+                    consoleView.showMessage("Saliendo");
                     break;
                 default:
-                    consoleView.showMessage("Invalid Option");
+                    consoleView.showMessage("opcion no valida");
                     break;
             }
         }
     }
 
     private void addContact() {
-        String name = consoleView.getinput("Enter the name: ");
-        String phone = consoleView.getinput("Enter the phone number: ");
+        String name = consoleView.getinput("Ingrese el nombre: ");
+        String phone = consoleView.getinput("Ingrese el número de teléfono: ");
         Contact<String, String> contact = new Contact<>(name, phone);
         contactManager.addContact(contact);
         consoleView.showMessage("Contacto agregado:");
     }
 
     private void findContact() {
-        String name = consoleView.getinput("Enter the name to search for: ");
+        String name = consoleView.getinput("Ingrese el nombre: ");
         Contact<String, String> contact = contactManager.findContactByName(name);
         if (contact != null) {
-            consoleView.showMessage("Contact found: " + contact);
+            consoleView.showMessage("Contact encontrado: " + contact);
         } else {
-            consoleView.showMessage("Contact not found");
+            consoleView.showMessage("Contacto no encontrado");
         } 
     }
 
