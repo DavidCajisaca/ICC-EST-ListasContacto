@@ -16,11 +16,11 @@ public class ConsoleView {
         System.out.println("3. Delete contact");
         System.out.println("4. Print contact");
         System.out.println("5. Exit");
-        System.out.print("Ingrese la opcion 🫡: ");
+        System.out.print("Ingrese la opcion : ");
     }
 
-    public String getinput(String prompt) {
-        System.out.print(" * " + prompt);
+    public String getinput(String mensaje) {
+        System.out.print("  " + mensaje);
         return scanner.nextLine();
     }
 

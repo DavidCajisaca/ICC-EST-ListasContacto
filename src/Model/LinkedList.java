@@ -46,10 +46,10 @@ public class LinkedList<T> {
         Node<T> newNode = new Node<>(value, null);
         if (head == null) {
             head = newNode;
-            tail = newNode; // Also set tail when list is empty
+            tail = newNode; 
         } else {
-            tail.setNext(newNode); // Append to the current tail
-            tail = newNode;        // Update the tail
+            tail.setNext(newNode);//Establece el siguiente nodo del tail al nuevo nodo
+            tail = newNode;        
         }
         size++;
     }
@@ -62,7 +62,7 @@ public class LinkedList<T> {
         if (head.getValue().equals(value)) {
             head = head.getNext();
             if (head == null) {
-                tail = null; // If list becomes empty, update tail
+                tail = null;
             }
             size--;
             return;
@@ -73,7 +73,7 @@ public class LinkedList<T> {
             if (current.getNext().getValue().equals(value)) {
                 current.setNext(current.getNext().getNext());
                 if (current.getNext() == null) {
-                    tail = current; // Update tail if last element is removed
+                    tail = current; 
                 }
                 size--;
                 return;

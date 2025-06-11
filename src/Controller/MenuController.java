@@ -46,7 +46,7 @@ public class MenuController {
         String phone = consoleView.getinput("Enter the phone number: ");
         Contact<String, String> contact = new Contact<>(name, phone);
         contactManager.addContact(contact);
-        consoleView.showMessage("Contact added");
+        consoleView.showMessage("Contacto agregado:");
     }
 
     private void findContact() {
@@ -56,13 +56,13 @@ public class MenuController {
             consoleView.showMessage("Contact found: " + contact);
         } else {
             consoleView.showMessage("Contact not found");
-        }
+        } 
     }
 
     private void deleteContact() {
-        String name = consoleView.getinput("Enter the name to delete: ");
+        String name = consoleView.getinput("Ingrese el nombre para eliminar: ");
         contactManager.deleteContactByName(name);
-        consoleView.showMessage("Contact deleted");
+        consoleView.showMessage("Contacto eliminado");
     }
 
     private void printList() {

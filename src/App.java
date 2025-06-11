@@ -1,8 +1,7 @@
-import java.util.Scanner;
-
 import Controller.ContactManager;
 import Controller.MenuController;
 import View.ConsoleView;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
@@ -16,3 +15,4 @@ public class App {
         scanner.close(); 
     }
 }
+ 
